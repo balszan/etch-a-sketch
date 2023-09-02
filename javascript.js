@@ -25,16 +25,21 @@ function removeSquares() {
 
 createSquares(16);
 
-const squares = document.querySelectorAll('.squares');
+button.addEventListener('click', () => {
+    let gridNumber = prompt('How many squares on each side?');
+    removeSquares();
+    createSquares(gridNumber);
+    etch();
+})
+
+function etch() {
+    const squares = document.querySelectorAll('.squares');
 
 for(let i=0; i<squares.length; i++) {
     squares[i].addEventListener('mouseover', () => {
         squares[i].style.backgroundColor = 'black';
     })
 }
+}
 
-button.addEventListener('click', () => {
-    let gridNumber = prompt('How many squares on each side?');
-    removeSquares();
-    createSquares(gridNumber);
-})
+etch();
