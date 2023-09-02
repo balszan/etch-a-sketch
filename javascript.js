@@ -4,12 +4,16 @@ board.style.gridTemplateRows = 'repeat(16,1fr)';
 const button = document.querySelector('#choice');
 
 function createSquares(num) {
-    for(let i=0; i<num**2; i++) {
-        let square = document.createElement('div');
-        square.classList.add('squares');
-        board.appendChild(square);
-        board.style.gridTemplateColumns = `repeat(${num},1fr)`;
-        board.style.gridTemplateRows = `repeat(${num},1fr)`;
+    if(num<=100) {
+        for(let i=0; i<num**2; i++) {
+            let square = document.createElement('div');
+            square.classList.add('squares');
+            board.appendChild(square);
+            board.style.gridTemplateColumns = `repeat(${num},1fr)`;
+            board.style.gridTemplateRows = `repeat(${num},1fr)`;
+        }
+    } else {
+        alert('Too many! Please insert a number smaller than 100.');
     }
 }
 
