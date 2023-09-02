@@ -23,7 +23,6 @@ function removeSquares() {
     }
 }
 
-createSquares(16);
 
 button.addEventListener('click', () => {
     let gridNumber = prompt('How many squares on each side?');
@@ -42,4 +41,6 @@ for(let i=0; i<squares.length; i++) {
 }
 }
 
+
+createSquares(16);
 etch();
